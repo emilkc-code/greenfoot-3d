@@ -58,5 +58,5 @@ public class Meshes
     
     public float[] meshTriangleUVs = {};
     
-    public GreenfootImage texture;
+    public GreenfootImage texture = new GreenfootImage("missing-texture.png");
 }

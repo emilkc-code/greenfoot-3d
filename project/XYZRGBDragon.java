@@ -11,7 +11,5 @@ public class XYZRGBDragon extends Meshes
         meshVertices = ObjLoader.loadedVertices;
         meshTriangleIndices = ObjLoader.loadedTriangleIndices;
         meshTriangleUVs = ObjLoader.loadedTriangleUVs;
-
-        texture = new GreenfootImage("teapot.png"); // put this in your project's /images folder
     }
 }

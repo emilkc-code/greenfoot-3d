@@ -11,7 +11,5 @@ public class Cube extends Meshes
         meshVertices = ObjLoader.loadedVertices;
         meshTriangleIndices = ObjLoader.loadedTriangleIndices;
         meshTriangleUVs = ObjLoader.loadedTriangleUVs;
-
-        texture = new GreenfootImage("cube.png"); // put this in your project's /images folder
     }
 }

@@ -152,7 +152,7 @@ public class Renderer extends Actor
     public void drawScene() {
         GreenfootImage canvas = getImage();
         canvas.clear();
-        canvas.setColor(Color.BLACK);
+        canvas.setColor(Color.WHITE);
         canvas.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
     
         // Farthest first, nearest last, so near triangles paint over far ones
