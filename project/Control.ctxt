@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Control
+comment1.params=camera
+comment1.target=void\ setCamera(Camera)
+comment2.params=
+comment2.target=void\ controlCamera()
+numComments=3

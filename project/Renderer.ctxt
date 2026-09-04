@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Renderer
+comment1.params=width\ height
+comment1.target=Renderer(int,\ int)
+comment2.params=camera
+comment2.target=void\ setCamera(Camera)
+comment3.params=
+comment3.target=void\ clearQueue()
+comment4.params=
+comment4.target=getRenderQueue()
+comment5.params=meshPosition\ meshRotation\ meshScale\ meshVertices\ triIndices\ triangleUVs\ texture
+comment5.target=void\ queueMesh(float[],\ float[],\ float[],\ float[],\ int[],\ float[],\ greenfoot.GreenfootImage)
+comment6.params=texture\ u\ v
+comment6.target=greenfoot.Color\ sampleTexture(greenfoot.GreenfootImage,\ float,\ float)
+comment7.params=
+comment7.target=void\ drawScene()
+comment8.params=verts\ i1\ i2
+comment8.target=float\ cameraSpaceDistance(float[],\ int,\ int)
+numComments=9

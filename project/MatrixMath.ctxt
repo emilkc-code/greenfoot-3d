@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=MatrixMath
+comment1.params=matrix\ rotX\ rotY\ rotZ
+comment1.target=void\ matrixRotation(float[],\ float,\ float,\ float)
+comment2.params=matrix\ fov
+comment2.target=void\ matrixPerspectiveProjection(float[],\ int)
+comment3.params=degrees
+comment3.target=float[]\ rotationX3x3(float)
+comment4.params=degrees
+comment4.target=float[]\ rotationY3x3(float)
+comment5.params=m
+comment5.target=float[]\ transpose3x3(float[])
+comment6.params=a\ b
+comment6.target=float[]\ multiply3x3(float[],\ float[])
+comment7.params=m\ v
+comment7.target=float[]\ multiply3x1(float[],\ float[])
+numComments=8

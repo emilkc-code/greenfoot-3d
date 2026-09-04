@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Meshes
+comment1.params=
+comment1.target=float[]\ getPosition()
+comment10.params=array
+comment10.target=void\ setScale(float[])
+comment2.params=
+comment2.target=float[]\ getRotation()
+comment3.params=
+comment3.target=float[]\ getScale()
+comment4.params=
+comment4.target=float[]\ getVertices()
+comment5.params=
+comment5.target=int[]\ getTriangleIndices()
+comment6.params=
+comment6.target=float[]\ getTriangleUVs()
+comment7.params=
+comment7.target=greenfoot.GreenfootImage\ getTexture()
+comment8.params=array
+comment8.target=void\ setPosition(float[])
+comment9.params=array
+comment9.target=void\ setRotation(float[])
+numComments=11

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ObjLoader
+comment1.params=filename
+comment1.target=void\ load(java.lang.String)
+comment2.params=rawIndex\ currentListSize
+comment2.target=int\ resolveIndex(int,\ int)
+numComments=3

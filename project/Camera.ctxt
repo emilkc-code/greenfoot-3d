@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Camera
+comment1.params=
+comment1.target=float[]\ getCameraPosition()
+comment2.params=
+comment2.target=float[]\ getCameraScale()
+comment3.params=
+comment3.target=float[]\ getCameraOrientation()
+comment4.params=array
+comment4.target=void\ setCameraPosition(float[])
+comment5.params=array
+comment5.target=void\ setCameraScale(float[])
+comment6.params=array
+comment6.target=void\ setCameraOrientation(float[])
+numComments=7

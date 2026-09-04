@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Compositor
+comment1.params=renderer
+comment1.target=void\ setRenderer(Renderer)
+comment2.params=mesh
+comment2.target=void\ queueMesh(Meshes)
+comment3.params=
+comment3.target=void\ composit()
+numComments=4
