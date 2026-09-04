@@ -2,6 +2,8 @@
 comment0.target=Control
 comment1.params=camera
 comment1.target=void\ setCamera(Camera)
+comment1.text=We\ set\ the\ camera\ using\ our\ Main\ class\ to\ ensure\ it's\ the\ same\ as\ the\ Renderer\ class's\ camera
 comment2.params=
 comment2.target=void\ controlCamera()
+comment2.text=Here\ we\ change\ the\ position\ and\ rotation\ of\ the\ camera\ based\ on\ keyboard\ inputs
 numComments=3

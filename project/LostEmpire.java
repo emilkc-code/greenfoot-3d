@@ -4,7 +4,7 @@ public class LostEmpire extends Meshes
 {
 public LostEmpire() {
   meshPosition = new float[] { 0, 0, 0 };
-  meshRotation = new float[] { 180, 180, 0 };
+  meshRotation = new float[] { 0, 180, 0 };
   meshScale    = new float[] { 40, 40, 40 };
 
   ObjLoader.load("lost_empire.obj");

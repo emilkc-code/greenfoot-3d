@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=ObjLoader
+comment0.text=\n\ Converts\ a\ .obj\ file\ to\ raw\ data\n
 comment1.params=filename
 comment1.target=void\ load(java.lang.String)
 comment2.params=rawIndex\ currentListSize

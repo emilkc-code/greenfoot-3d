@@ -3,7 +3,7 @@ import greenfoot.*;
 public class Meshes
 {
 
-// Defining properties and methods for all of our meshes
+/* Defining properties and methods for all of our meshes */
 public float[] meshPosition = { 0, 0, 0 };
 public float[] meshRotation = { 0, 0, 0 };
 public float[] meshScale    = { 1, 1, 1 };
@@ -13,7 +13,11 @@ public float[] getPosition() {
 }
 
 public float[] getRotation() {
-  return meshRotation;
+  return new float[] {
+          meshRotation[0] + 180,
+          meshRotation[1],
+          meshRotation[2]
+  };
 }
 
 public float[] getScale() {
@@ -60,6 +64,6 @@ public int[] meshTriangleIndices = {};
 
 public float[] meshTriangleUVs = {};
 
-// In case you don't add your own in the mesh class
+/* In case you don't add your own in the mesh class */
 public GreenfootImage texture = new GreenfootImage("missing-texture.png");
 }

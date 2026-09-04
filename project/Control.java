@@ -4,15 +4,16 @@ public class Control
 private MatrixMath matrixMath = new MatrixMath();
 private Camera camera;
 
-// We set the camera using our Main class to ensure it's the same as the Renderer class's camera
+/**
+ * Set camera to use for controls
+ */
+/* We set the camera using our Main class to ensure it's the same as the Renderer class's camera */
 public void setCamera(Camera camera) {
   this.camera = camera;
 }
 
-// Here we change the position and rotation of the camera based on keyboard inputs
+/* Here we change the position and rotation of the camera based on keyboard inputs */
 public void controlCamera() {
-
-  // Just making sure we have a camera
   if (camera == null) { return; }
 
   float moveSpeed = 10.0f;
@@ -36,15 +37,17 @@ public void controlCamera() {
   if (Greenfoot.isKeyDown("right")) { yawDelta -= rotationSpeed; }
 
 
-  // Making sure we take into account our current orientation when rotating
+  /* Making sure we take into account our current orientation when rotating */
   if (pitchDelta != 0) { camera.setCameraOrientation(matrixMath.multiply3x3(camera.getCameraOrientation(), matrixMath.rotationX3x3(pitchDelta))); }
 
-  // You can switch multiply3x3 and getCameraOrientation to make yaw local instead of locked to y-axis
+  /* You can switch multiply3x3 and getCameraOrientation to make yaw local instead of locked to y-axis */
   if (yawDelta   != 0) { camera.setCameraOrientation(matrixMath.multiply3x3(matrixMath.rotationY3x3(yawDelta), camera.getCameraOrientation())); }
 
-  // Same goes here, but for movement
-  // You can set dx, dy or dz to 0 and add them directly to their
-  // respective axes in setCameraPosition to lock them to world axes
+  /*
+   Same goes here, but for movement
+   You can set dx, dy or dz to 0 and add them directly to their
+   respective axes in setCameraPosition to lock them to world axes
+  */
   float[] localMove = { dx, dy, dz };
   float[] worldMove = matrixMath.multiply3x1(camera.getCameraOrientation(), localMove);
 

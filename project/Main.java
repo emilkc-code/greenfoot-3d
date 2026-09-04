@@ -14,25 +14,25 @@ private boolean wired = false;
 public void act()
 {
 
-  // Check if we are in a world yet and if so we can use a variable to stop checking again
+  /* Check if we are in a world yet, and if so, we can use a variable to stop checking again */
   if (!wired && getWorld() != null) {
     java.util.List<Renderer> renderers = getWorld().getObjects(Renderer.class);
     if (!renderers.isEmpty()) {
 
-      // Here we set the Renderer for the Compositor
-      compositor.setRenderer(renderers.get(0));
+      /* Here we set the Renderer for the Compositor */
+      compositor.setRenderer(renderers.getFirst());
 
-      // Here we set the camera to use for the Renderer
-      renderers.get(0).setCamera(camera);
+      /* Here we set the camera to use for the Renderer */
+      renderers.getFirst().setCamera(camera);
       wired = true;
     }
   }
 
-  // Setting the same camera in Control
+  /* Setting the same camera in Control */
   control.setCamera(camera);
 
-  // Calling our main methods
+  /* Calling our main methods */
   control.controlCamera();
-  compositor.composit();
+  compositor.composite();
 }
 }

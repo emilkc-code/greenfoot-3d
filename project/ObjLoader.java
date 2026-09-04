@@ -1,8 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-// Helper class for converting .obj files to the format we need
-
+/**
+ * Converts a .obj file to raw data
+ */
 public class ObjLoader
 {
 public static float[] loadedVertices;

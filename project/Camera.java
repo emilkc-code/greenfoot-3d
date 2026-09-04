@@ -3,7 +3,10 @@ public class Camera
 private float[] cameraPosition = { 0, 0, 0 };
 private float[] cameraScale = { 1, 1, 1 };
 
-// 3x3 orientation matrix: rows are the camera's local right/up/forward axes in world space
+/*
+ 3x3 orientation matrix: rows are the camera's local
+ right/up/forward axes in world space
+*/
 private float[] cameraOrientation = {
   1, 0, 0,
   0, 1, 0,

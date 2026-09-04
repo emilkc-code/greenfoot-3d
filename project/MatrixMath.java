@@ -1,36 +1,32 @@
 public class MatrixMath
 {
 
-// Bunch of complicated matrix math that we put in its own class
+/* Matrix math that we put in its own class */
 
+/**
+ * Performs rotation in 3D space
+ * @param matrix
+ * @param rotX
+ * @param rotY
+ * @param rotZ
+ */
 public void matrixRotation(float[] matrix, float rotX, float rotY, float rotZ) {
-  float x = matrix[0], y = matrix[1], z = matrix[2];
+  float[] mathMatrix = multiply3x1(rotationX3x3(rotX), matrix);
+  mathMatrix = multiply3x1(rotationY3x3(rotY), mathMatrix);
+  mathMatrix = multiply3x1(rotationZ3x3(rotZ), mathMatrix);
 
-  float radY = (float) Math.toRadians(rotY);
-  float cosY = (float) Math.cos(radY), sinY = (float) Math.sin(radY);
-  float x1 = x * cosY + z * sinY;
-  float y1 = y;
-  float z1 = -x * sinY + z * cosY;
-
-  float radX = (float) Math.toRadians(rotX);
-  float cosX = (float) Math.cos(radX), sinX = (float) Math.sin(radX);
-  float x2 = x1;
-  float y2 = y1 * cosX - z1 * sinX;
-  float z2 = y1 * sinX + z1 * cosX;
-
-  float radZ = (float) Math.toRadians(rotZ);
-  float cosZ = (float) Math.cos(radZ), sinZ = (float) Math.sin(radZ);
-  float x3 = x2 * cosZ - y2 * sinZ;
-  float y3 = x2 * sinZ + y2 * cosZ;
-
-  matrix[0] = x3;
-  matrix[1] = y3;
-  matrix[2] = z2;
+  matrix[0] = mathMatrix[0];
+  matrix[1] = mathMatrix[1];
+  matrix[2] = mathMatrix[2];
 }
 
+/**
+ * Applies perspective based on an fov
+ * @param matrix
+ * @param fov
+ */
 public void matrixPerspectiveProjection(float[] matrix, int fov) {
   float x = matrix[0], y = matrix[1], z = matrix[2], w = matrix[3];
-
   float fovParam = (float) Math.tan(Math.toRadians(fov) / 2.0f);
   float zFar = 2000f, zNear = 1f;
 
@@ -55,16 +51,37 @@ public void matrixPerspectiveProjection(float[] matrix, int fov) {
   matrix[3] = projW;
 }
 
+/**
+ * Returns a matrix to multiply with for rotation along the x-axis in 3D space
+ * @param degrees
+ * @return
+ */
 public float[] rotationX3x3(float degrees) {
   float rad = (float) Math.toRadians(degrees);
   float c = (float) Math.cos(rad), s = (float) Math.sin(rad);
   return new float[] { 1,0,0,  0,c,-s,  0,s,c };
 }
 
+/**
+ * Returns a matrix to multiply with for rotation along the y-axis in 3D space
+ * @param degrees
+ * @return
+ */
 public float[] rotationY3x3(float degrees) {
   float rad = (float) Math.toRadians(degrees);
   float c = (float) Math.cos(rad), s = (float) Math.sin(rad);
   return new float[] { c,0,s,  0,1,0,  -s,0,c };
+}
+
+/**
+ * Returns a matrix to multiply with for rotation along the z-axis in 3D space
+ * @param degrees
+ * @return
+ */
+public float[] rotationZ3x3(float degrees) {
+  float rad = (float) Math.toRadians(degrees);
+  float c = (float) Math.cos(rad), s = (float) Math.sin(rad);
+  return new float[] { c,-s,0,  s,c,0,  0,0,1 };
 }
 
 public float[] transpose3x3(float[] m) {

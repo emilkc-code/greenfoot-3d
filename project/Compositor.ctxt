@@ -2,8 +2,7 @@
 comment0.target=Compositor
 comment1.params=renderer
 comment1.target=void\ setRenderer(Renderer)
-comment2.params=mesh
-comment2.target=void\ queueMesh(Meshes)
-comment3.params=
-comment3.target=void\ composit()
-numComments=4
+comment2.params=
+comment2.target=void\ composite()
+comment2.text=\n\ Clears\ all\ meshes\ from\ the\ scene\ and\ re-adds\ them\n
+numComments=3
